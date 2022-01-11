@@ -19,24 +19,28 @@
 # Output: [[2,2,2,2],[2,3,3],[3,5]]
 def combinations_to_the_total_chosen(i,list_of_integers, total_chosen,combinations_lists = []):
     s = sum(combinations_lists)
-    length_of_list = int(len(list_of_integers)) # error
-    print (length_of_list)
+    string = ""
+    for e in list_of_integers:
+        e = str(e)
+        string = string + e
+    print (string)
     if s == total_chosen:
         print (combinations_lists)
     else:
-        while i <= length_of_list: ## error
+        while i <= (length_of_list): ## error
         #for i in range(len(list_of_integers)):
             n = list_of_integers[i]
             next_integer = list_of_integers[i+1]
             i =+1
             combinations_to_the_total_chosen(i,next_integer, total_chosen,combinations_lists = [n])
 
-list_of_integers= []
+
 i = 0
 i = int(i)
 list_of_numbers = str(input("Please eneter numbers to add up to chosen total(example 1 2 5 7):\n"))
 # converts intput from string to list
 list_of_numbers = list(list_of_numbers.split(" "))
+list_of_integers= []
 for e in list_of_numbers:
     e = int(e)
     list_of_integers.append(e)
