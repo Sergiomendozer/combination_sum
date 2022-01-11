@@ -18,11 +18,19 @@
 # Input: candidates = [2,3,5], target = 8
 # Output: [[2,2,2,2],[2,3,3],[3,5]]
 
+def combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists = []):
+    s = sum(combinations_lists)
 
-def combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_list):
-    print (list_of_integers)
-    print (total_chosen)
-    print (combinations_list)
+    if s == total_chosen:
+        print (combinations_lists)
+
+    else:
+        for i in range(len(list_of_integers)):
+            n = list_of_integers[i]
+            next_integer = list_of_integers[i+1]
+            # next_integer chnage 
+            combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists = [n])
+
 
 
 #user inputs and where program starts
@@ -34,5 +42,4 @@ for e in list_of_numbers:
     e = int(e)
     list_of_integers.append(e)
 total_chosen = int(input("What is the total you would like these numbers combinations to add up to:\n"))
-combinations_lists = ['test'] # test will be empty
-combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists)
+combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists = [] )
