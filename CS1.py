@@ -5,9 +5,7 @@
 
 # It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
 
- 
-
-# Example 1:
+ # Example 1:
 
 # Input: candidates = [2,3,6,7], target = 7
 # Output: [[2,2,3],[7]]
@@ -21,13 +19,20 @@
 # Output: [[2,2,2,2],[2,3,3],[3,5]]
 
 
-def combinations_to_the_total_chosen(list_of_numbers, total_chosen,combinations_list):
-    print (list_of_numbers)
+def combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_list):
+    print (list_of_integers)
     print (total_chosen)
     print (combinations_list)
 
 
-total_chosen = int(input("ask:"))
-list_of_numbers = int(input("ask the str???"))
-combinations_lists = ['test']
-combinations_to_the_total_chosen(list_of_numbers, total_chosen,combinations_lists)
+#user inputs and where program starts
+list_of_integers = []
+list_of_numbers = str(input("Please eneter numbers to add up to chosen total(example 1 2 5 7):\n"))
+# converts intput from string to list
+list_of_numbers = list(list_of_numbers.split(" "))
+for e in list_of_numbers:
+    e = int(e)
+    list_of_integers.append(e)
+total_chosen = int(input("What is the total you would like these numbers combinations to add up to:\n"))
+combinations_lists = ['test'] # test will be empty
+combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists)
