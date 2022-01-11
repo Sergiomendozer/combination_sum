@@ -27,7 +27,7 @@ def combinations_to_the_total_chosen(i,list_of_integers, total_chosen,length_of_
             n = list_of_integers[i]
             next_integer = list_of_integers[i+1]
             i =+1
-            combinations_to_the_total_chosen(i,next_integer, total_chosen,combinations_lists = [n])
+            combinations_to_the_total_chosen(i,next_integer, total_chosen,length_of_list,combinations_lists = [n])
 
 i = 0
 i = int(i)
@@ -44,10 +44,10 @@ for e in list_of_integers:
         e = str(e)
         string_used_to_count = string_used_to_count + e
 (string_used_to_count)
-print("string")
-print(string_used_to_count)
-print ("count is")
+# print("string")
+# print(string_used_to_count)
+# print ("count is")
 length_of_list = (len(string_used_to_count))
-print (length_of_list)
-# total_chosen = int(input("What is the total you would like these numbers combinations to add up to:\n"))
-# combinations_to_the_total_chosen(i,list_of_integers, total_chosen,length_of_list, combinations_lists = [])
+# print (length_of_list)
+total_chosen = int(input("What is the total you would like these numbers combinations to add up to:\n"))
+combinations_to_the_total_chosen(i,list_of_integers, total_chosen,length_of_list, combinations_lists = [])
