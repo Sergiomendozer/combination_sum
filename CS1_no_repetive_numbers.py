@@ -17,29 +17,28 @@
 
 # Input: candidates = [2,3,5], target = 8
 # Output: [[2,2,2,2],[2,3,3],[3,5]]
-
-def combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists = []):
+def combinations_to_the_total_chosen(i,list_of_integers, total_chosen,combinations_lists = []):
     s = sum(combinations_lists)
-
     if s == total_chosen:
         print (combinations_lists)
 
     else:
-        for i in range(len(list_of_integers)):
+        while i <= len(list_of_integers):
+        #for i in range(len(list_of_integers)):
             n = list_of_integers[i]
             next_integer = list_of_integers[i+1]
-            # next_integer chnage 
-            combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists = [n])
+            i =+1
+            combinations_to_the_total_chosen(i,next_integer, total_chosen,combinations_lists = [n])
 
-
-
-#user inputs and where program starts
 list_of_integers = []
+i = 0
+i = int(i)
 list_of_numbers = str(input("Please eneter numbers to add up to chosen total(example 1 2 5 7):\n"))
 # converts intput from string to list
 list_of_numbers = list(list_of_numbers.split(" "))
 for e in list_of_numbers:
     e = int(e)
     list_of_integers.append(e)
+    list_of_integers = list(list_of_integers)
 total_chosen = int(input("What is the total you would like these numbers combinations to add up to:\n"))
-combinations_to_the_total_chosen(list_of_integers, total_chosen,combinations_lists = [] )
+combinations_to_the_total_chosen(i,list_of_integers, total_chosen,combinations_lists = [])
