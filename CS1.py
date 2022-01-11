@@ -19,3 +19,15 @@
 
 # Input: candidates = [2,3,5], target = 8
 # Output: [[2,2,2,2],[2,3,3],[3,5]]
+
+
+def combinations_to_the_total_chosen(list_of_numbers, total_chosen,combinations_list):
+    print (list_of_numbers)
+    print (total_chosen)
+    print (combinations_list)
+
+
+total_chosen = int(input("ask:"))
+list_of_numbers = int(input("ask the str???"))
+combinations_lists = ['test']
+combinations_to_the_total_chosen(list_of_numbers, total_chosen,combinations_lists)
